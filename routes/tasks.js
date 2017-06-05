@@ -2,7 +2,17 @@ var express = require('express');
 var router = express.Router();
 var models = require('../models');
 
-/* GET users listing. */
+/**
+ * @apiGroup Tasks
+ * @apiSuccess {String} status API Status' message
+ * @apiSuccessExample {json} Success
+ * HTTP/1.1 200 OK
+ * {"Status":"Go"}
+ */
+router.get('/', function(req, res, next) {
+    res.render('index', { title: 'Express' });
+});
+
 router.get('/', function(req, res, next) {
     models.Task.findAll({}).then(tasks=>{
         res.json({tasks:tasks});
