@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
+    "password": "",
     "database": "sequelize_development",
     "host": "127.0.0.1",
     "dialect": "mysql"
@@ -17,6 +17,13 @@
     "username": "root",
     "password": "root",
     "database": "sequelize_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "home":{
+    "username": "root",
+    "password": null,
+    "database": "sequelize_home",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }

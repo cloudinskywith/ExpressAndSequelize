@@ -2,9 +2,13 @@
 module.exports = function (sequelize, DataTypes) {
     var Task = sequelize.define('Task', {
         id: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             primaryKey: true,
             autoIncrement: true
+        },
+        UserId:{
+            type:DataTypes.INTEGER,
+            defaultValue:1
         },
         title: {
             type: DataTypes.STRING,
