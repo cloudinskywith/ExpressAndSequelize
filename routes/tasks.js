@@ -1,13 +1,11 @@
 var express = require('express');
 var router = express.Router();
+var models = require('../models');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-    res.json({
-        tasks:[
-            {title:'by some shoes'},
-            {title:'fix notebook'}
-        ]
+    models.Task.findAll({attributes:['id','title','done']}).then(tasks=>{
+        res.json({tasks:tasks});
     });
 });
 
